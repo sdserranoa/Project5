@@ -55,8 +55,11 @@ ReactDOM.render(
               <PrivateRoute path="/profile" exact component={Profile} />
             </Switch>
           </Container>
+          
+         
         </Router>
       </IntlProvider>
+     
     </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')

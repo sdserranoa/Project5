@@ -1,6 +1,6 @@
 .hero {
   width: 80%;
-  height: 70%;
+  height: 85%;
   background: linear-gradient(45deg, #6f00ff, #00acea);
   border-radius: 30px;
   position: absolute;
@@ -27,6 +27,7 @@
 .hero-text {
   color: white;
   text-align: center;
+  margin:20px;
 }
 
 h1.hero-text {
@@ -35,11 +36,12 @@ h1.hero-text {
 
 .hero-button {
   padding: 10px 15px;
+  margin:20px;
   color: white;
   background: transparent;
   font-size: 30px;
   position: relative;
-  top: 50px;
+  top: 10px;
   font-weight: bold;
   border: solid 1px white;
   border-radius: 10px;
