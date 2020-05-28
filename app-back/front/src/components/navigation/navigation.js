@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './css/style.css'
+import { FormattedMessage } from 'react-intl'
 
 export default class Navigation extends Component {
   render() {
@@ -13,12 +14,14 @@ export default class Navigation extends Component {
         </div>
         <div class="links-section">
           <a href="#">Home</a>
-          <a href="#">Play</a>
+          <a href="#">
+            <FormattedMessage id="Play" />
+          </a>
           <a href="#" id="signin">
-            Sign In
+            <FormattedMessage id="SignIn" />
           </a>
           <a href="#" id="signup">
-            Sign Up
+            <FormattedMessage id="SignUp" />
           </a>
         </div>
       </nav>

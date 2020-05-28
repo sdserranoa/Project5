@@ -38,6 +38,10 @@ nav {
   margin-left: 30px;
 }
 
+.links-section a:hover {
+  color: #6f00ff;
+}
+
 #signin {
   padding: 10px 15px;
   font-weight: bold;

@@ -20,7 +20,7 @@
 }
 
 .hero-text-container {
-  margin: auto 0;
+  margin: auto 30px;
   text-align: center;
 }
 
@@ -43,13 +43,14 @@ h1.hero-text {
   text-decoration: none;
   border: solid 1px white;
   border-radius: 10px;
-  -webkit-transition: color 0.5s, background 0.5s;
-  transition: color 0.5s, background 0.5s;
+  -webkit-transition: color 0.5s, background 0.5s, mix-blend-mode 0.5s, color 0.5s;
+  transition: color 0.5s, background 0.5s, mix-blend-mode 0.5s, color 0.5s;
 }
 
 .hero-button:hover {
-  color: #6f00ff;
+  color: black;
   background: white;
   text-decoration: none;
+  mix-blend-mode: screen;
 }
 /*# sourceMappingURL=style.css.map */
