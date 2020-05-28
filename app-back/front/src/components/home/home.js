@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <div className="hero">
         <div className="hero-text-container">
-          <h1 className="hero-text">Master the trivia world</h1>
+          <h1 className="hero-text">Master the Trivia World</h1>
           <h2 className="hero-text">
             Solve our questions and be the ultimate trivia master
           </h2>

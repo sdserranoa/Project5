@@ -12,11 +12,15 @@ import Container from 'react-bootstrap/Container'
 
 //Components
 import Home from './components/home/home'
+import Navigation from './components/navigation/navigation'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navigation />
     <Container fluid>
-      <Home />
+      <Router>
+        <Route path="/" exact component={Home} />
+      </Router>
     </Container>
   </React.StrictMode>,
   document.getElementById('root')
