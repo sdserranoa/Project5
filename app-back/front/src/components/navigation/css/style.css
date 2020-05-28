@@ -1,0 +1,72 @@
+nav {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-section {
+  display: inline;
+  margin-left: 10%;
+  margin-right: 0;
+}
+
+.logo-section a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+}
+
+.links-section {
+  margin-right: 10%;
+}
+
+.links-section a {
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+#signin {
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  background: #6f00ff;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+#signin:hover {
+  -webkit-box-shadow: 0 1px 10px #6f00ff;
+          box-shadow: 0 1px 10px #6f00ff;
+}
+
+#signup {
+  padding: 10px 15px;
+  font-weight: bold;
+  border: solid 1px #6f00ff;
+  border-radius: 10px;
+  color: #6f00ff;
+  -webkit-transition: background 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
+}
+
+#signup:hover {
+  background: #6f00ff;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
