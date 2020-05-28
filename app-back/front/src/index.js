@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { IntlProvider } from 'react-intl'
 
 //CSS
 import './css/index.css'
@@ -14,14 +15,24 @@ import Container from 'react-bootstrap/Container'
 import Home from './components/home/home'
 import Navigation from './components/navigation/navigation'
 
+//Locales
+import localEsMessages from './locales/es.json'
+import localEnMessages from './locales/en.json'
+
+const messages = navigator.language.startsWith('en')
+  ? localEnMessages
+  : localEsMessages
+
 ReactDOM.render(
   <React.StrictMode>
-    <Navigation />
-    <Container fluid>
-      <Router>
-        <Route path="/" exact component={Home} />
-      </Router>
-    </Container>
+    <IntlProvider locale={navigator.language} messages={messages}>
+      <Navigation />
+      <Container fluid>
+        <Router>
+          <Route path="/" exact component={Home} />
+        </Router>
+      </Container>
+    </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
