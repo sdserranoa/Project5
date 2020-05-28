@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
+import { Auth0Provider } from './react-auth0-spa'
+import config from './auth_config.json'
+import history from './utils/history'
 
 //CSS
 import './css/index.css'
@@ -23,16 +26,31 @@ const messages = navigator.language.startsWith('en')
   ? localEnMessages
   : localEsMessages
 
+const onRedirectCallback = (appState) => {
+  history.push(
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  )
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <IntlProvider locale={navigator.language} messages={messages}>
-      <Navigation />
-      <Container fluid>
-        <Router>
-          <Route path="/" exact component={Home} />
-        </Router>
-      </Container>
-    </IntlProvider>
+    <Auth0Provider
+      domain={config.domain}
+      client_id={config.clientId}
+      redirect_uri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
+    >
+      <IntlProvider locale={navigator.language} messages={messages}>
+        <Navigation />
+        <Container fluid>
+          <Router>
+            <Route path="/" exact component={Home} />
+          </Router>
+        </Container>
+      </IntlProvider>
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )

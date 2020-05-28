@@ -36,11 +36,11 @@ h1.hero-text {
 .hero-button {
   padding: 10px 15px;
   color: white;
+  background: transparent;
   font-size: 30px;
   position: relative;
   top: 50px;
   font-weight: bold;
-  text-decoration: none;
   border: solid 1px white;
   border-radius: 10px;
   -webkit-transition: color 0.5s, background 0.5s, mix-blend-mode 0.5s, color 0.5s;
@@ -50,7 +50,6 @@ h1.hero-text {
 .hero-button:hover {
   color: black;
   background: white;
-  text-decoration: none;
   mix-blend-mode: screen;
 }
 /*# sourceMappingURL=style.css.map */

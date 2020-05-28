@@ -44,8 +44,10 @@ nav {
 
 #signin {
   padding: 10px 15px;
+  margin-left: 30px;
   font-weight: bold;
   border-radius: 10px;
+  border: none;
   color: white;
   background: #6f00ff;
   -webkit-transition: -webkit-box-shadow 0.5s;
@@ -57,20 +59,5 @@ nav {
 #signin:hover {
   -webkit-box-shadow: 0 1px 10px #6f00ff;
           box-shadow: 0 1px 10px #6f00ff;
-}
-
-#signup {
-  padding: 10px 15px;
-  font-weight: bold;
-  border: solid 1px #6f00ff;
-  border-radius: 10px;
-  color: #6f00ff;
-  -webkit-transition: background 0.5s, color 0.5s;
-  transition: background 0.5s, color 0.5s;
-}
-
-#signup:hover {
-  background: #6f00ff;
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */
