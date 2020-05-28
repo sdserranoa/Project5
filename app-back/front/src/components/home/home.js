@@ -10,6 +10,9 @@ export default class Home extends Component {
           <h2 className="hero-text">
             Solve our questions and be the ultimate trivia master
           </h2>
+          <a href="#" className="hero-button">
+            Get Started
+          </a>
         </div>
       </div>
     )
