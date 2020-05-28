@@ -1,23 +1,34 @@
 import React, { Component } from 'react'
-import './css/style.css'
 import { FormattedMessage } from 'react-intl'
+import { useAuth0 } from '../../react-auth0-spa'
 
-export default class Home extends Component {
-  render() {
-    return (
-      <div className="hero">
-        <div className="hero-text-container">
-          <h1 className="hero-text">
-            <FormattedMessage id="HeroH1" />
-          </h1>
-          <h2 className="hero-text">
-            <FormattedMessage id="HeroH2" />
-          </h2>
-          <a href="#" className="hero-button">
-            <FormattedMessage id="HeroButton" />
-          </a>
-        </div>
-      </div>
-    )
+//CSS
+import './css/style.css'
+
+const Home = () => {
+  const { isAuthenticated, loginWithRedirect, loading } = useAuth0()
+
+  if (loading) {
+    return <div>Loading...</div>
   }
+
+  return (
+    <div className="hero">
+      <div className="hero-text-container">
+        <h1 className="hero-text">
+          <FormattedMessage id="HeroH1" />
+        </h1>
+        <h2 className="hero-text">
+          <FormattedMessage id="HeroH2" />
+        </h2>
+        {!isAuthenticated && (
+          <button className="hero-button" onClick={() => loginWithRedirect({})}>
+            <FormattedMessage id="HeroButton" />
+          </button>
+        )}
+      </div>
+    </div>
+  )
 }
+
+export default Home
