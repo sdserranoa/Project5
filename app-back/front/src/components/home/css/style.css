@@ -21,6 +21,7 @@
 
 .hero-text-container {
   margin: auto 0;
+  text-align: center;
 }
 
 .hero-text {
@@ -30,5 +31,25 @@
 
 h1.hero-text {
   font-weight: bold;
+}
+
+.hero-button {
+  padding: 10px 15px;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  top: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  border: solid 1px white;
+  border-radius: 10px;
+  -webkit-transition: color 0.5s, background 0.5s;
+  transition: color 0.5s, background 0.5s;
+}
+
+.hero-button:hover {
+  color: #6f00ff;
+  background: white;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
