@@ -16,21 +16,24 @@ const Navigation = () => {
         </a>
       </div>
       <div class="links-section">
-        <a href="#">Home</a>
-        {isAuthenticated && (
-          <a href="#">
-            <FormattedMessage id="Play" />
-          </a>
-        )}
+        <a href="/">Home</a>
         {!isAuthenticated && (
-          <button id="signin" onClick={() => loginWithRedirect({})}>
+          <button className="signin" onClick={() => loginWithRedirect({})}>
             <FormattedMessage id="SignIn" />
           </button>
         )}
         {isAuthenticated && (
-          <button id="signin" onClick={() => logout()}>
-            <FormattedMessage id="Logout" />
-          </button>
+          <span>
+            <a href="#">
+              <FormattedMessage id="Play" />
+            </a>
+            <a href="/profile">
+              <FormattedMessage id="Profile" />
+            </a>
+            <button className="signin" onClick={() => logout()}>
+              <FormattedMessage id="Logout" />
+            </button>
+          </span>
         )}
       </div>
     </nav>

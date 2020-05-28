@@ -6,7 +6,11 @@ import { useAuth0 } from '../../react-auth0-spa'
 import './css/style.css'
 
 const Home = () => {
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, loginWithRedirect, loading } = useAuth0()
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
 
   return (
     <div className="hero">
